@@ -162,7 +162,7 @@ fi
 cd mysqlbin
 
 printf "${Merah}Download source Mysql (500MB)${batas}\n"
-#wget --progress=dot http://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.10-linux-glibc2.5-i686.tar 2>&1
+wget --progress=dot http://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.10-linux-glibc2.5-i686.tar 2>&1
 printf "${Merah}Berpindah ke folder /usr/local${batas}\n"
 cd  /usr/local
 printf "${Merah}Ekstrak source mysql dan berpindah folder${batas}\n"
