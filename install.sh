@@ -154,6 +154,10 @@ printf "${Merah} file berhasil dibuat pada direktori /usr/local/apache/htdocs/co
 
 function mysql()
 {
+
+#Harap diperhatikan variabel usr harus diganti dengan username linux lu.
+
+usr="masyeni"
 if [ ! -d "mysqlbin" ]; then
  printf "${Merah}Membuat direktori temp untuk mysql${batas}\n"
 mkdir mysqlbin
@@ -166,7 +170,7 @@ printf "${Merah}Download source Mysql (500MB)${batas}\n"
 printf "${Merah}Berpindah ke folder /usr/local${batas}\n"
 cd  /usr/local
 printf "${Merah}Ekstrak source mysql dan berpindah folder${batas}\n"
-tar zxvf /home/$USER/mysql/mysql-5.7.10-linux-glibc2.5-i686.tar
+tar -xvf /home/$usr/testing/mysqlbin/mysql-5.7.10-linux-glibc2.5-i686.tar
 tar zxvf mysql-5.7.10-linux-glibc2.5-i686.tar.gz
 ln -s mysql-5.7.10-linux-glibc2.5-i686 mysql
 cd mysql
