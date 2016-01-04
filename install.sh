@@ -59,7 +59,7 @@ cd ..
 cd httpd-2.4.18
 
 #Konfigurasi untuk Apache
-./configure --prefix=/usr/local/apache --with-included-apr --with-pcre=/usr/local/pcre --enable-ssl --enable-headers --enable-so
+./configure --prefix=/usr/local/apache --with-included-apr --with-pcre=/usr/local/pcre --enable-headers --enable-so
 
 printf "${Merah}Jalankan perintah Make${batas}\n"
 make
@@ -93,7 +93,7 @@ printf "${Merah}Installing Libxml${batas}\n"
 cd libxml2-2.9.3
 
 printf "${Merah}Konfigurasi Libxml${batas}\n"
- ./configure --prefix=/usr/local --disable-static --with-history 
+ ./configure --prefix=/usr/local --disable-static --with-history
 
 printf "${Merah}Menjalankan perintah Make${batas}\n"
 make
@@ -124,7 +124,7 @@ printf "Menghapus httpd.conf dan mengganti dengan yang baru\n"
 target="/usr/local/apache/conf/httpd.conf"
 if [ -f "$target" ]
 then
- rm /usr/local/apache/conf/httpd.conf"
+ rm /usr/local/apache/conf/httpd.conf
  printf "Downloading new httpd.conf"
  cd /usr/local/apache/conf
  wget -O wget -O httpd.conf http://pastebin.com/raw/bT84QFKN
@@ -168,5 +168,3 @@ case $opt in
 *) echo invalid Option;;
 esac
 done
-
-
