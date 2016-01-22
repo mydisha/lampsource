@@ -8,9 +8,9 @@ printf "${Merah}LAMP FROM Source Installer by Dias${batas}\n"
 
 function buildtools(){
 #sudo apt-get update && sudo apt-get -y upgrade
- sudo apt-get -y install build-essential
- sudo apt-get -y install python-dev
- sudo apt-get -y install libaio1 libaio-dev
+ sudo apt-get -y --force-yes install build-essential
+ sudo apt-get -y --force-yes install python-dev
+ sudo apt-get -y --force-yes install libaio1 libaio-dev
 }
 
 function apache()
@@ -18,7 +18,7 @@ function apache()
 if [ ! -d "apachebin" ]; then
 printf "${Merah}Membuat direktori tampung sementara${batas}\n"
 mkdir apachebin
-fi 
+fi
 cd apachebin
 
 
@@ -161,7 +161,7 @@ usr="masyeni"
 if [ ! -d "mysqlbin" ]; then
  printf "${Merah}Membuat direktori temp untuk mysql${batas}\n"
 mkdir mysqlbin
-fi 
+fi
 
 cd mysqlbin
 
@@ -188,7 +188,7 @@ chown -R mysql data
 
 cd bin
 printf "${Merah}Login kedalam mysql${batas}\n"
-./mysql -u root -p 
+./mysql -u root -p
 }
 
 PS3='Silahkan dipilih :'
